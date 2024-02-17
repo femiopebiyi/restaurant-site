@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+}
+
+.navbar{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 96%;
+    margin: 0em auto 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 15dvh;
+    z-index: 1;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li{
+    margin: 0 1em;
+}
+
+.nav ul a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav ul a:hover{
+    text-decoration: underline;
+    text-underline-offset: .4em;
+}
+
+.icons svg{
+    margin: 0 .6em;
+    cursor: pointer;
+}
+
+.home{
+    border: 1px solid blue;
+    height: 85dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .welcome{
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.welcome h1{
+    font-size: 6rem;
+    color: white;
+    font-family: "Lobster", "Poppins";
+}
+
+.welcome p{
+    color: white;
+    font-weight: 700;
+}
