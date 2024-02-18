@@ -1,5 +1,5 @@
 import Menu from "../../components/Menu"
-import Reservation from "../../components/Reservation"
+// import Reservation from "../../components/Reservation"
 
 
 
@@ -15,7 +15,7 @@ const Home = () => {
       </div>
 
       <Menu/>
-      <div style={{
+      {/* <div style={{
       maxWidth: '1400px',
       width: '100%',
       margin: '0 auto',
@@ -23,7 +23,7 @@ const Home = () => {
     }} className="reserve-con">
       <h1 className="check">check out reservations</h1>
     <Reservation/>
-    </div>
+    </div> */}
     </div>
   )
 }
