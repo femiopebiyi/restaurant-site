@@ -65,7 +65,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(./assets/images/background2.webp);
+    background-color: #57648C;
     background-position: center;
     background-size: cover;
 }
