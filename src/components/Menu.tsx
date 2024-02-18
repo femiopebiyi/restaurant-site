@@ -6,7 +6,7 @@ const Menu = () => {
 
 
   return (
-    <div className="menu-con">
+    <div className="menu-con" id="order">
         <div className="menu">
             {menuItems.map((item)=>{
                 return <div className="indiItem">

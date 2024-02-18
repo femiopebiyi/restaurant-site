@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Poppins";
 }
@@ -45,6 +49,9 @@ body{
 .icons svg{
     margin: 0 .6em;
     cursor: pointer;
+}
+.icons svg:hover{
+    animation: squish 300ms ease-in-out;
 }
 
 .home{
@@ -137,6 +144,14 @@ body{
 }
 
 .img-slider-img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: translate 300ms ease-in-out;
+}
+.img-slider-img img{
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -175,4 +190,35 @@ body{
     50%{
         scale: 1.4 .6;
     }
+}
+
+.switch{
+    display: flex;
+    gap: .25rem;
+}
+
+.dot-icon{
+    all: unset;
+    display: block;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    transition: scale 100ms ease-in-out;
+}
+
+
+.dot-icon:hover{
+    scale: 1.2;
+}
+.dot-icon > *{
+    stroke: white;
+    fill: black;
+    height: 100%;
+    width: 100%;
+}
+
+.check{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 1rem;
 }

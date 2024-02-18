@@ -15,11 +15,11 @@ const Navbar = () => {
             <nav className="nav">
                 <ul>
                     <li><NavLink to=''>Home</NavLink></li>
-                    <li><NavLink to=''>Orders</NavLink></li>
+                    <li><a href='#order'>Orders</a></li>
                     <li><NavLink to=''>Menu</NavLink></li>
                     <li><NavLink to=''>About</NavLink></li>
                     <li><NavLink to=''>Contact</NavLink></li>
-                    <li><NavLink to=''>Reservation</NavLink></li>
+                    <li><a href='#reservation'>Reservation</a></li>
                 </ul>
             </nav>
 

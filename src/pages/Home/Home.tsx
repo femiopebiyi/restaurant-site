@@ -19,7 +19,7 @@ const Home = () => {
       maxWidth: '1400px',
       width: '100%',
       margin: '0 auto',
-      aspectRatio: "10 / 4"
+      aspectRatio: "10 / 4.5"
     }}>
     <Reservation/>
     </div>
