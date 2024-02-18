@@ -2,18 +2,21 @@ import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-rou
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home/Home'
+import { UIContextProvider } from './context/UI-context'
 
 function App() {
 
 
   return (
     <div className='App'>
+      <UIContextProvider>
       <Router>
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
         </Routes>
       </Router>
+      </UIContextProvider>
     </div>
   )
 }

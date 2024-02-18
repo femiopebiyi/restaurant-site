@@ -222,3 +222,110 @@ body{
     text-transform: capitalize;
     margin-top: 1rem;
 }
+
+.reserve-con {
+    aspect-ratio: 10/4.5;
+}
+
+h4{
+    font-size: 3rem;
+}
+
+.ham-menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 675px) {
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        margin-left: 1em;
+    }
+.ham-menu {
+        display: block;
+        margin-right: 1em;
+    }
+
+    .big, .big-icons{
+        display: none;
+    }
+
+    .ham ul{
+        flex-direction: column;
+    }
+
+    #ham-con{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: #57648C;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .ham-nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .ham li{
+        text-align: center;
+    }
+
+    .ham-icon{
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        bottom: .5rem;
+    }
+
+    .cancel{
+        position: absolute;
+        top: 4%;
+        right: 4%;
+    }
+
+
+
+    .reserve-con{
+        aspect-ratio: 1/1;
+    }
+
+    .welcome h1{
+        font-size: 1.8rem;
+        margin: 1em;
+    }
+
+    .check{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 1.5rem;
+    }
+
+    .menu{
+        width: 97%;
+    }
+    .indiItem{
+        width: 96%;
+        margin: 0 auto 1em auto;
+        max-width: 500px;
+    }
+        .indiItem .img {
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+
+}
