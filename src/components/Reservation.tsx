@@ -27,7 +27,7 @@ setImageIndex((index)=> {
     <div className="reservation" style={{width: '100%', height: "100%", position: "relative"}} id="reservation">
       <div style={{width: '100%', height: '100%', display: "flex",overflow: "hidden"}}>
         {slideImages.map((img)=>{
-          return<div style={{translate: `${-100 *imageIndex}%`}} className="img-slider-img"> <img src={img.url} alt=""  key={img.url} />
+          return<div style={{translate: `${-100 *imageIndex}%`}} className="img-slider-img"> <img src={img.url} alt=""  key={img.url} loading="lazy"/>
           <h4 style={{position: "absolute", top:"10%", right: "15%", fontFamily: "Lobster", fontWeight: 400, color:  'white'}}>{img.caption}</h4>
           </div>
         })}

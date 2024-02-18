@@ -1,7 +1,7 @@
-import reservation1 from "./assets/images/reservation1.jpg"
-import reservation2 from "./assets/images/reservation2.jpg"
-import reservation3 from "./assets/images/reservation3.jpg"
-import reservation4 from "./assets/images/reservation4.jpg"
+import reservation1 from "./assets/images/reservation1.webp"
+import reservation2 from "./assets/images/reservation2.webp"
+import reservation3 from "./assets/images/reservation3.webp"
+import reservation4 from "./assets/images/reservation4.webp"
 
 
 export const slideImages = [

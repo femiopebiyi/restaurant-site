@@ -1,7 +1,7 @@
-import pasta from "./assets/images/pasta.jpg"
-import pizza from "./assets/images/pizza.jpg"
-import salmon from "./assets/images/salmon.jpg"
-import salad from "./assets/images/salad.jpg"
+import pasta from "./assets/images/pasta.webp"
+import pizza from "./assets/images/pizza.webp"
+import salmon from "./assets/images/salmon.webp"
+import salad from "./assets/images/salad.webp"
 
 
 export const menuItems = [

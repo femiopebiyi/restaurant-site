@@ -1,6 +1,5 @@
 import { menuItems } from "../menuItem"
-
-
+import LazyLoad from "react-lazy-load"
 
 const Menu = () => {
 
@@ -11,7 +10,9 @@ const Menu = () => {
             {menuItems.map((item)=>{
                 return <div className="indiItem">
                     <div className="img">
-                        <img src={item.pictureUrl} alt="" className="menu-img"/>
+                        <LazyLoad height={300}>
+                        <img src={item.pictureUrl} alt="" className="menu-img" loading="lazy"/>
+                        </LazyLoad>
                     </div>
                     <h5>{item.name}</h5>
                     <p>{item.price}</p>
