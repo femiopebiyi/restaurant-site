@@ -16,6 +16,9 @@ body{
     font-family: "Poppins";
 }
 
+header{
+    height: 15dvh;
+}
 .navbar{
     display: flex;
     /* border: 1px solid red; */
@@ -25,6 +28,7 @@ body{
     align-items: center;
     height: 15dvh;
     z-index: 1;
+
 }
 
 .nav ul{
