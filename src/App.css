@@ -57,7 +57,6 @@ header{
 .icons svg:hover{
     animation: squish 300ms ease-in-out;
 }
-
 .home{
     
     height: 85dvh;
@@ -65,17 +64,15 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(./assets/images/background2.svg);
+    background-image: url(./assets/images/background1.webp);
     background-position: center;
     background-size: cover;
 }
-
 .home .welcome{
     text-transform: uppercase;
     text-align: center;
 
 }
-
 .welcome h1{
     font-size: 6rem;
     color: white;
@@ -104,7 +101,7 @@ header{
     margin-bottom: 1em;
     max-width: 300px;
     overflow: hidden;
-    border: 3px solid black;
+    border: 1px solid gray;
     border-radius: 10px;
     padding: .4em;
 
