@@ -1,4 +1,4 @@
-import pasta from "./assets/images/biscoff.svg"
+import pasta from "./assets/images/pexels-engin-akyurt-2347311.webp"
 import pizza from "./assets/images/blueberry.svg"
 import salmon from "./assets/images/cheesecake.svg"
 import salad from "./assets/images/chocolate.svg"
