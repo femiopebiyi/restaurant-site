@@ -1,8 +1,7 @@
-import pasta from "./assets/images/danijela-prijovic-qits91IZv1o-unsplash.jpg"
-import pizza from "./assets/images/amirali-mirhashemian-XtLPfib7OuM-unsplash.jpg"
-import salmon from "./assets/images/ca-creative-bpPTlXWTOvg-unsplash.jpg"
-import salad from "./assets/images/pexels-julia-filirovska-8251537 (1).webp"
-
+import pasta from "./assets/images/pasta.jpg"
+import pizza from "./assets/images/pizza.jpg"
+import salmon from "./assets/images/salmon.jpg"
+import salad from "./assets/images/salad.jpg"
 
 export const menuItems = [
     {
