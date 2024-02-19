@@ -5,6 +5,10 @@ const Menu = () => {
 
   return (
     <div className="menu-con" id="order">
+        <h2 style={{
+            textAlign: "center",
+            marginBottom: ".7em"
+        }}>Our Menu Include</h2>
         <div className="menu">
             {menuItems.map((item)=>{
                 return <div className="indiItem">

@@ -305,7 +305,7 @@ h4{
         justify-content: center;
         align-items: center;
         z-index: 1;
-        transition: transform 300ms ease-in-out;
+        transition: transform 200ms ease-in-out;
     }
 
     .ham-nav{
