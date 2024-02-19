@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.webp";
 import { FacebookLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
 import { MenuIcon, XIcon } from "lucide-react";
-import { useCallback, useContext, useEffect, useState} from "react";
+import { useContext} from "react";
 import { UIContext } from "../context/UI-context";
 
 
