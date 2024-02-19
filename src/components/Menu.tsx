@@ -10,9 +10,8 @@ const Menu = () => {
             {menuItems.map((item)=>{
                 return <div className="indiItem">
                     <div className="img">
-                        <LazyLoad height={300}>
                         <img src={item.pictureUrl} alt="" className="menu-img" loading="lazy"/>
-                        </LazyLoad>
+                       
                     </div>
                     <h5>{item.name}</h5>
                     <p>{item.price}</p>
