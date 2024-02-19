@@ -1,5 +1,5 @@
 import pasta from "./assets/images/danijela-prijovic-qits91IZv1o-unsplash.jpg"
-import pizza from "./assets/images/pexels-kampus-production-6605214 (1).webp"
+import pizza from "./assets/images/amirali-mirhashemian-XtLPfib7OuM-unsplash.jpg"
 import salmon from "./assets/images/pexels-horizon-content-3763847.webp"
 import salad from "./assets/images/pexels-julia-filirovska-8251537 (1).webp"
 
