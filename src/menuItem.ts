@@ -1,7 +1,7 @@
 import pasta from "./assets/images/pexels-engin-akyurt-2347311.webp"
-import pizza from "./assets/images/blueberry.svg"
-import salmon from "./assets/images/cheesecake.svg"
-import salad from "./assets/images/chocolate.svg"
+import pizza from "./assets/images/pexels-kampus-production-6605214 (1).webp"
+import salmon from "./assets/images/pexels-horizon-content-3763847.webp"
+import salad from "./assets/images/pexels-julia-filirovska-8251537 (1).webp"
 
 
 export const menuItems = [
