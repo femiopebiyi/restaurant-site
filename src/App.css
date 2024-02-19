@@ -65,7 +65,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #57648C;
+    background-image: url(./assets/images/background2.svg);
     background-position: center;
     background-size: cover;
 }
@@ -337,7 +337,10 @@ h4{
         .indiItem .img {
             border-radius: 10px;
             overflow: hidden;
+            max-width: 250px;
+            width: 100%;
 
+            margin: 0 auto;
         }
 
 
