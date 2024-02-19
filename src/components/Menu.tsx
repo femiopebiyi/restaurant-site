@@ -1,5 +1,4 @@
 import { menuItems } from "../menuItem"
-import LazyLoad from "react-lazy-load"
 
 const Menu = () => {
 
