@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.webp";
 import { FacebookLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
 import { MenuIcon, XIcon } from "lucide-react";
-import { useContext} from "react";
+import { useCallback, useContext, useEffect, useState} from "react";
 import { UIContext } from "../context/UI-context";
 
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     const {hamState, handleClick} = useContext(UIContext)
 
   return (
-    <header>
+    <header className="big-header">
         <div className="navbar">
             <div className="logo">
                 <img src={logo} alt="logo" />
@@ -49,7 +49,6 @@ type HamProps ={
 }
 
 function SmallNav({hamState, handleClick}: HamProps){
-
 
 
 return <header id="ham-con" style={{

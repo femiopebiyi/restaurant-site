@@ -270,6 +270,8 @@ h4{
 }
 
 
+
+
 @media screen and (max-width: 675px) {
 
     header{
@@ -366,5 +368,14 @@ h4{
             margin: 0 auto;
         }
 
+        .big-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            /* ensure it stays on top of other content */
+            background-color: white;
+        }
 
 }
+

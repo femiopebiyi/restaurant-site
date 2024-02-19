@@ -25,6 +25,7 @@ const [hamState, setHamState] = useState(false)
         setHamState(prev => !prev)
     }
 
+    
 const contextData = {hamState, handleClick}
 
     return <UIContext.Provider value={contextData}>
