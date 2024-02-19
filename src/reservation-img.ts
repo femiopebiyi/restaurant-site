@@ -7,7 +7,7 @@ import reservation3 from "./assets/images/reservation3.webp"
 export const slideImages = [
   {
     url: reservation1,
-    caption: 'Bar Table'
+    caption: 'Bar Table',
   },
   {
     url: reservation2,

@@ -53,7 +53,7 @@ function SmallNav({hamState, handleClick}: HamProps){
 
 
 return <header id="ham-con" style={{
-    transform: hamState ? "translateY(0px)" : "translateY(-800px)"
+    transform: hamState ? "translateY(0px)" : "translateY(-900px)"
 }}>
         <div className="navbar ham-nav">
 
