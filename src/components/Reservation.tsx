@@ -1,4 +1,6 @@
-import {ArrowBigLeft, ArrowBigRight, Circle, CircleDot} from "lucide-react"
+import { Circle, CircleDot } from "lucide-react";
+ import previous from "../assets/images/trace.svg"
+ import next from "../assets/images/trace (1).svg"
 
 import { useState } from "react"
 import { slideImages } from "../reservation-img"
@@ -33,8 +35,8 @@ setImageIndex((index)=> {
           </div>
         })}
       </div>
-      <button className="img-slider-btn" style={{left: 0}} onClick={showPrevImg}><ArrowBigLeft/></button>
-      <button className="img-slider-btn" style={{right: 0}} onClick={showNextImg}><ArrowBigRight/></button>
+      <button className="img-slider-btn" style={{left: 0}} onClick={showPrevImg}><img src={previous}/></button>
+      <button className="img-slider-btn" style={{right: 0}} onClick={showNextImg}><img src={next}/></button>
 
       <div style={{
         position: "absolute",
