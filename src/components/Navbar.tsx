@@ -24,7 +24,7 @@ const Navbar = () => {
                     <li><a href='#order'>Orders</a></li>
                     <li><NavLink to=''>Menu</NavLink></li>
                     <li><NavLink to=''>About</NavLink></li>
-                    <li><NavLink to='/contact'>Contact</NavLink></li>
+                    <li><NavLink to='contact'>Contact</NavLink></li>
                     <li><a href='#reservation'>Reservation</a></li>
                 </ul>
             </nav>
@@ -62,7 +62,7 @@ return <header id="ham-con" style={{
                     <li className="hov"><a href='#order'  onClick={handleClick}>Orders</a></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>Menu</NavLink></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>About</NavLink></li>
-                    <li className="hov"><NavLink to='/contact'  onClick={handleClick}>Contact</NavLink></li>
+                    <li className="hov"><NavLink to='contact'  onClick={handleClick}>Contact</NavLink></li>
                     <li className="hov"><a href='#reservation'  onClick={handleClick}>Reservation</a></li>
                 </ul>
             </nav>
