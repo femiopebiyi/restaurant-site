@@ -58,12 +58,12 @@ return <header id="ham-con" style={{
 
             <nav className="nav ham">
                 <ul>
-                    <li><NavLink to=''  onClick={handleClick}>Home</NavLink></li>
-                    <li><a href='#order'  onClick={handleClick}>Orders</a></li>
-                    <li><NavLink to=''  onClick={handleClick}>Menu</NavLink></li>
-                    <li><NavLink to=''  onClick={handleClick}>About</NavLink></li>
-                    <li><NavLink to=''  onClick={handleClick}>Contact</NavLink></li>
-                    <li><a href='#reservation'  onClick={handleClick}>Reservation</a></li>
+                    <li className="hov"><NavLink to=''  onClick={handleClick}>Home</NavLink></li>
+                    <li className="hov"><a href='#order'  onClick={handleClick}>Orders</a></li>
+                    <li className="hov"><NavLink to=''  onClick={handleClick}>Menu</NavLink></li>
+                    <li className="hov"><NavLink to=''  onClick={handleClick}>About</NavLink></li>
+                    <li className="hov"><NavLink to=''  onClick={handleClick}>Contact</NavLink></li>
+                    <li className="hov"><a href='#reservation'  onClick={handleClick}>Reservation</a></li>
                 </ul>
             </nav>
 
