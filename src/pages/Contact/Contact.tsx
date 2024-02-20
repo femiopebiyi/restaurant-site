@@ -25,6 +25,8 @@ const Contact = () => {
 
     function onCreatePost(data: FormData){
         console.log(data)
+
+        reset()
     }
 
   return (
