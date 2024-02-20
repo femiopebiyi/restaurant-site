@@ -343,7 +343,7 @@ h4{
             width: 0%;
             height: 100%;
             z-index: -1;
-            transition: width 3 5r 00ms ease-in-out;
+            transition: width 300ms ease-in-out;
         }
 
         .hov:hover::before{
