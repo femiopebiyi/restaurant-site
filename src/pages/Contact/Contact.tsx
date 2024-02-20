@@ -42,22 +42,22 @@ const Contact = () => {
             <div className="name">
                 <h4>Name - <span>Required</span></h4>
                 <input type="text" id="" placeholder="Name" {...register("name")}/>
-                <p className="error">{errors.name?.message}</p>
+                <p className="error" style={{color: "red"}}>{errors.name?.message}</p>
             </div>
             <div className="name email">
                 <h4>Email - <span>Required</span></h4>
                 <input type="email" id="" placeholder="Email" {...register("email")}/>
-                <p className="error">{errors.email?.message}</p>
+                <p className="error" style={{color: "red"}}>{errors.email?.message}</p>
             </div>
             <div className="name number">
                 <h4>Phone Number - <span>Required</span></h4>
                 <input type="text"  id="" placeholder="Phone Number" {...register("number")}/>
-                <p className="error">{errors.number?.message && "number is required"}</p>
+                <p className="error" style={{color: "red"}}>{errors.number?.message && "number is required"}</p>
             </div>
             <div className="message">
                 <h4>Your Message - <span>Required</span></h4>
                 <textarea id="" placeholder="Your Message" {...register("message")}/>
-                <p className="error">{errors.message?.message}</p>
+                <p className="error" style={{color: "red"}}>{errors.message?.message}</p>
             </div>
 
             <button>Send</button>

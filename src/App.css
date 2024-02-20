@@ -492,6 +492,9 @@ header{
             margin: 0 auto;
         }
 
-
+    #message{
+        width: 98%;
+        margin: 2em auto 1em auto;
+    }
 }
 
