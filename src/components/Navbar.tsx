@@ -20,7 +20,7 @@ const Navbar = () => {
 
             <nav className="nav big">
                 <ul>
-                    <li><NavLink to=''>Home</NavLink></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
                     <li><a href='#order'>Orders</a></li>
                     <li><NavLink to=''>Menu</NavLink></li>
                     <li><NavLink to=''>About</NavLink></li>
@@ -58,7 +58,7 @@ return <header id="ham-con" style={{
 
             <nav className="nav ham">
                 <ul>
-                    <li className="hov"><NavLink to=''  onClick={handleClick}>Home</NavLink></li>
+                    <li className="hov"><NavLink to='/'  onClick={handleClick}>Home</NavLink></li>
                     <li className="hov"><a href='#order'  onClick={handleClick}>Orders</a></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>Menu</NavLink></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>About</NavLink></li>
