@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../assets/images/logo.webp";
+import logo from "../assets/images/femilogosmall.png";
 import { FacebookLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
 import { MenuIcon, XIcon } from "lucide-react";
 import { useContext} from "react";
