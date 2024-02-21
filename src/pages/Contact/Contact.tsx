@@ -16,7 +16,7 @@ type FormData = {
 const Contact = () => {
 
     const [sendState, setSendState] = useState("Send")
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(true);
 
 
     const schema = yup.object().shape({
@@ -88,19 +88,19 @@ const Contact = () => {
                     transform: "translate(-50%, -50%)",
                     backgroundColor: "#004332",
                     height: "200px",
-                    display: "flex",
+                    display: showSuccessMessage ? "flex" : "none",
                     alignItems: "center",
                     justifyContent: "center",
                     maxWidth: "500px",
                     width: "350px",
-                    opacity: showSuccessMessage ? 1 : 0
+                   
                 }}>
                     <h3 style={{textAlign: "center", color: "white"}}>Message has been sent successfully</h3>
                     <XIcon className="cancelmessage" style={{
                         position: "absolute",
                         top: "5px",
                         right: "5px"
-                    }} onClick={()=>{setShowSuccessMessage(prev => !prev)}}/>
+                    }} onClick={()=>{setShowSuccessMessage(prev => !prev)}} color="white"/>
                 </div>
             
     </section>
