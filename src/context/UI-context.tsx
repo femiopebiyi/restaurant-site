@@ -4,11 +4,15 @@ import { ReactNode, createContext, useState } from "react";
 interface UIContextType {
     hamState: boolean;
     handleClick: () => void;
+    handleSuccess: ()=> void;
+    showSuccessMessage: boolean;
 }
 
 export const UIContext = createContext<UIContextType>({
     hamState: false,
-    handleClick: () => {} // Provide a dummy function
+    handleClick: () => {}, // Provide a dummy function,
+    handleSuccess: () => {},
+    showSuccessMessage: false
 });
 
 
@@ -25,8 +29,13 @@ const [hamState, setHamState] = useState(false)
         setHamState(prev => !prev)
     }
 
-    
-const contextData = {hamState, handleClick}
+    function handleSuccess (){
+        setShowSuccessMessage(prev => !prev)
+    }
+
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+const contextData = {hamState, handleClick, handleSuccess, showSuccessMessage}
 
     return <UIContext.Provider value={contextData}>
         {props.children}

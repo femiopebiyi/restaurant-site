@@ -3,8 +3,9 @@ import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup"
 import { addDoc } from "firebase/firestore";
 import { colRef } from "../../firebase/firebase";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { XIcon } from "lucide-react";
+import { UIContext } from "../../context/UI-context";
 
 type FormData = {
     name: string;
@@ -16,9 +17,11 @@ type FormData = {
 const Contact = () => {
 
     const [sendState, setSendState] = useState("Send")
-    const [showSuccessMessage, setShowSuccessMessage] = useState(true);
+    
 
+    const {handleSuccess, showSuccessMessage} = useContext(UIContext)
 
+    
     const schema = yup.object().shape({
         name: yup.string().required('Name is required'),
         email: yup.string().email("enter valid Email").required("email is required"),
@@ -40,7 +43,7 @@ const Contact = () => {
         }).then(()=>{
             reset()
             setSendState("Send")
-            setShowSuccessMessage(true)
+            handleSuccess()
         })
 
         
@@ -100,7 +103,7 @@ const Contact = () => {
                         position: "absolute",
                         top: "5px",
                         right: "5px"
-                    }} onClick={()=>{setShowSuccessMessage(prev => !prev)}} color="white"/>
+                    }} onClick={handleSuccess} color="white"/>
                 </div>
             
     </section>
