@@ -80,7 +80,7 @@ const Contact = () => {
             <button>{sendState}</button>
         </form>
     </div>
-(
+
                 <div className="success" style={{
                     position: "absolute",
                     top: "50%",
@@ -102,7 +102,7 @@ const Contact = () => {
                         right: "5px"
                     }} onClick={()=>{setShowSuccessMessage(prev => !prev)}}/>
                 </div>
-            )
+            
     </section>
   )
 }
