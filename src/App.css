@@ -304,6 +304,7 @@ header{
     resize: none;
     width: 100%;
     height: 70px;
+    outline: none;
     border: 3px solid gray;
 }
 
@@ -313,7 +314,7 @@ header{
 .name input{
     width: 100%;
     height: 50px;
-
+    outline: none;
     border: 3px solid gray;
 
 }
