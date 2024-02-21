@@ -16,7 +16,7 @@ type FormData = {
 const Contact = () => {
 
     const [sendState, setSendState] = useState("Send")
-    const [showSuccessMessage, setShowSuccessMessage] = useState(true);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
 
     const schema = yup.object().shape({
