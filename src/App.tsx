@@ -14,8 +14,11 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/'>
+            <Route index element={<Home/>}/>
+          <Route path='contact' element={<Contact/>}/>
+          </Route>
+
         </Routes>
       </Router>
       </UIContextProvider>
