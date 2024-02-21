@@ -16,7 +16,7 @@ const Home = () => {
 
       <Menu/>
       <div style={{
-      maxWidth: '1400px',
+      maxWidth: '2000px',
       width: '100%',
       margin: '0 auto',
  
