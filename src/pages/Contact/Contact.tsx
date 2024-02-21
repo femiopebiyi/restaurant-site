@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup"
+import { addDoc } from "firebase/firestore";
+import { colRef } from "../../firebase/firebase";
+import { useState } from "react";
+import { XIcon } from "lucide-react";
 
 type FormData = {
     name: string;
@@ -10,6 +14,9 @@ type FormData = {
 }
 
 const Contact = () => {
+
+    const [sendState, setSendState] = useState("Send")
+    const [showSuccessMessage, setShowSuccessMessage] = useState(true);
 
 
     const schema = yup.object().shape({
@@ -23,10 +30,20 @@ const Contact = () => {
         resolver: yupResolver(schema)
     })
 
-    function onCreatePost(data: FormData){
-        console.log(data)
+    async function onCreatePost(data: FormData){
+        setSendState("Sending..")
+        addDoc(colRef, {
+            name: data.name,
+            email: data.email,
+            number: data.number,
+            message: data.message
+        }).then(()=>{
+            reset()
+            setSendState("Send")
+            setShowSuccessMessage(true)
+        })
 
-        reset()
+        
     }
 
   return (
@@ -60,12 +77,36 @@ const Contact = () => {
                 <p className="error" style={{color: "red"}}>{errors.message?.message}</p>
             </div>
 
-            <button>Send</button>
+            <button>{sendState}</button>
         </form>
     </div>
+(
+                <div className="success" style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    backgroundColor: "#004332",
+                    height: "200px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    maxWidth: "500px",
+                    width: "350px",
+                    opacity: showSuccessMessage ? 1 : 0
+                }}>
+                    <h3 style={{textAlign: "center", color: "white"}}>Message has been sent successfully</h3>
+                    <XIcon className="cancelmessage" style={{
+                        position: "absolute",
+                        top: "5px",
+                        right: "5px"
+                    }} onClick={()=>{setShowSuccessMessage(prev => !prev)}}/>
+                </div>
+            )
     </section>
   )
 }
 
-<p className="error"></p>
+
 export default Contact
+

@@ -352,6 +352,10 @@ header{
     color: #fff;
 }
 
+.success{
+    transition: opacity 500ms ease-in-out;
+}
+
 @media screen and (max-width: 675px) {
 
     header{
