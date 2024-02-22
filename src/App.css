@@ -89,6 +89,22 @@ header{
     font-weight: 700;
 }
 
+.arrowDown{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    animation: move 400ms alternate-reverse infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(3px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 .menu-con{
     padding-top: 5em;
 

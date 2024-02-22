@@ -1,3 +1,5 @@
+// import { ArrowDown } from "phosphor-react"
+import {ArrowDown} from "lucide-react"
 import Menu from "../../components/Menu"
 import Reservation from "../../components/Reservation"
 
@@ -11,6 +13,8 @@ const Home = () => {
         <div className="welcome">
           <h1>welcome to FEMI's</h1>
           <p>Comfort food at your doorstep</p>
+          <a href="#order"><ArrowDown size={50} color="white" className="arrowDown"/></a>
+          
         </div>
       </div>
 
