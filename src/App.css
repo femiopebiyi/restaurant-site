@@ -90,11 +90,14 @@ header{
 }
 
 .arrowDown{
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
-    transform: translate(-50%, -50%);
     animation: move 400ms alternate-reverse infinite;
+}
+
+.arrowDownCon{
+    position: absolute;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
 }
 
 @keyframes move {

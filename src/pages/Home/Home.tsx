@@ -13,7 +13,7 @@ const Home = () => {
         <div className="welcome">
           <h1>welcome to FEMI's</h1>
           <p>Comfort food at your doorstep</p>
-          <a href="#order"><ArrowDown size={50} color="white" className="arrowDown"/></a>
+          <a href="#order" className="arrowDownCon"><ArrowDown size={50} color="white" className="arrowDown"/></a>
           
         </div>
       </div>
