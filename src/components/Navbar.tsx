@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/images/femilogosmall.png";
 import { FacebookLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
 import { MenuIcon, XIcon } from "lucide-react";
@@ -10,6 +10,8 @@ import { UIContext } from "../context/UI-context";
 const Navbar = () => {
 
     const {hamState, handleClick} = useContext(UIContext)
+    const location = useLocation()
+    const navigate = useNavigate()
 
   return (
     <header className="big-header">
@@ -20,12 +22,24 @@ const Navbar = () => {
 
             <nav className="nav big">
                 <ul>
-                    <li><NavLink to='/'>Home</NavLink></li>
-                    <li><a href='#order'>Orders</a></li>
-                    <li><NavLink to=''>Menu</NavLink></li>
-                    <li><NavLink to=''>About</NavLink></li>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><a href='#order' onClick={(e)=>{
+                        if(location.pathname !== '/'){
+                            e.preventDefault()
+                            navigate("..")
+                            setTimeout(()=>{document.getElementById("ordersLink")?.click()}, 500)
+                        }
+                    }} id="ordersLink">Orders</a></li>
+                    <li><NavLink to='/menu'>Menu</NavLink></li>
+                    <li><NavLink to='/about'>About</NavLink></li>
                     <li><NavLink to='/contact'>Contact</NavLink></li>
-                    <li><a href='#reservation'>Reservation</a></li>
+                    <li><a href='#reservation' onClick={(e)=>{
+                        if(location.pathname !== '/'){
+                            e.preventDefault()
+                            navigate("..")
+                            setTimeout(()=>{document.getElementById("reservationLink")?.click()}, 500)
+                        }
+                    }} id="reservationLink">Reservation</a></li>
                 </ul>
             </nav>
 
@@ -49,7 +63,7 @@ type HamProps ={
 }
 
 function SmallNav({hamState, handleClick}: HamProps){
-
+    const navigate = useNavigate()
 
 return <header id="ham-con" style={{
     transform: hamState ? "translateY(0px)" : "translateY(-900px)"
@@ -59,11 +73,29 @@ return <header id="ham-con" style={{
             <nav className="nav ham">
                 <ul>
                     <li className="hov"><NavLink to='/'  onClick={handleClick}>Home</NavLink></li>
-                    <li className="hov"><a href='#order'  onClick={handleClick}>Orders</a></li>
+                    <li className="hov"><a href='#order' onClick={(e)=>{
+                        if(location.pathname !== '/'){
+                            e.preventDefault()
+                            navigate("..")
+                            handleClick()
+                            setTimeout(()=>{document.getElementById("ordersLink")?.click()}, 500)
+                        } else{
+                            handleClick()
+                        }
+                    }} id="ordersLink">Orders</a></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>Menu</NavLink></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>About</NavLink></li>
                     <li className="hov"><NavLink to='/contact'  onClick={handleClick}>Contact</NavLink></li>
-                    <li className="hov"><a href='#reservation'  onClick={handleClick}>Reservation</a></li>
+                    <li className="hov"><a href='#reservation' onClick={(e)=>{
+                        if(location.pathname !== '/'){
+                            e.preventDefault()
+                            navigate("..")
+                            handleClick()
+                            setTimeout(()=>{document.getElementById("reservationLink")?.click()}, 500)
+                        }else{
+                            handleClick()
+                        }
+                    }} id="reservationLink">Reservation</a></li>
                 </ul>
             </nav>
 

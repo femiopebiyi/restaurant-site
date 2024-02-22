@@ -16,12 +16,14 @@ type FormData = {
 
 const Contact = () => {
 
+
+    
     const [sendState, setSendState] = useState("Send")
     
 
     const {handleSuccess, showSuccessMessage} = useContext(UIContext)
 
-    
+
     const schema = yup.object().shape({
         name: yup.string().required('Name is required'),
         email: yup.string().email("enter valid Email").required("email is required"),
