@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home/Home'
 import { UIContextProvider } from './context/UI-context'
 import Contact from './pages/Contact/Contact'
+import Orders from './pages/Orders/Orders'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route index element={<Home/>}/>
           <Route path='contact' element={<Contact/>}/>
+          <Route path='orders' element={<Orders/>}/>
         </Routes>
       </Router>
       </UIContextProvider>

@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom"
 import { menuItems } from "../menuItem"
 
 const Menu = () => {
-
+const navigate = useNavigate()
 
   return (
-    <div className="menu-con" id="order">
+    <div className="menu-con" id="menu">
         <h2 style={{
             textAlign: "center",
             marginBottom: ".7em"
@@ -22,7 +23,7 @@ const Menu = () => {
             })}
         </div>
 
-        <div className="button"><button className="order">Order Now</button></div>
+        <div className="button"><button className="order" onClick={()=> navigate("/orders")}>Order Now</button></div>
     </div>
   )
 }

@@ -382,8 +382,25 @@ header{
     transition: opacity 500ms ease-in-out;
 }
 
-@media screen and (max-width: 900px) {
+/* orders */
 
+.order-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 2em auto 0 auto;
+}
+
+.order-con .order-img{
+    width: 400px;
+    height: 400px;
+}
+
+.order-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 675px) {

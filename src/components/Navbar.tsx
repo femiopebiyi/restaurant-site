@@ -23,14 +23,14 @@ const Navbar = () => {
             <nav className="nav big">
                 <ul>
                     <li><NavLink to="/">Home</NavLink></li>
-                    <li><a href='#order' onClick={(e)=>{
+                    <li><a href='#menu' onClick={(e)=>{
                         if(location.pathname !== '/'){
                             e.preventDefault()
                             navigate("..")
-                            setTimeout(()=>{document.getElementById("ordersLink")?.click()}, 500)
+                            setTimeout(()=>{document.getElementById("menusLink")?.click()}, 500)
                         }
-                    }} id="ordersLink">Orders</a></li>
-                    <li><NavLink to='/menu'>Menu</NavLink></li>
+                    }} id="menusLink">Menu</a></li>
+                    <li><NavLink to='/orders'>Orders</NavLink></li>
                     <li><NavLink to='/about'>About</NavLink></li>
                     <li><NavLink to='/contact'>Contact</NavLink></li>
                     <li><a href='#reservation' onClick={(e)=>{
@@ -73,17 +73,17 @@ return <header id="ham-con" style={{
             <nav className="nav ham">
                 <ul>
                     <li className="hov"><NavLink to='/'  onClick={handleClick}>Home</NavLink></li>
-                    <li className="hov"><a href='#order' onClick={(e)=>{
+                    <li className="hov"><a href='#menu' onClick={(e)=>{
                         if(location.pathname !== '/'){
                             e.preventDefault()
                             navigate("..")
                             handleClick()
-                            setTimeout(()=>{document.getElementById("ordersLink")?.click()}, 500)
+                            setTimeout(()=>{document.getElementById("menusLink")?.click()}, 500)
                         } else{
                             handleClick()
                         }
-                    }} id="ordersLink">Orders</a></li>
-                    <li className="hov"><NavLink to=''  onClick={handleClick}>Menu</NavLink></li>
+                    }} id="menusLink">Menu</a></li>
+                    <li className="hov"><NavLink to='/orders'  onClick={handleClick}>Order</NavLink></li>
                     <li className="hov"><NavLink to=''  onClick={handleClick}>About</NavLink></li>
                     <li className="hov"><NavLink to='/contact'  onClick={handleClick}>Contact</NavLink></li>
                     <li className="hov"><a href='#reservation' onClick={(e)=>{
