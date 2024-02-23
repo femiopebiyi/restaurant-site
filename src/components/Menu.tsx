@@ -3,7 +3,6 @@ import { menuItems } from "../menuItem"
 
 const Menu = () => {
 const navigate = useNavigate()
-
   return (
     <div className="menu-con" id="menu">
         <h2 style={{
@@ -15,7 +14,6 @@ const navigate = useNavigate()
                 return <div className="indiItem">
                     <div className="img">
                         <img src={item.pictureUrl} alt="" className="menu-img"/>
-                       
                     </div>
                     <h5>{item.name}</h5>
                     <p>{item.price}</p>

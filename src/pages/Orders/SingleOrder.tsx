@@ -47,9 +47,3 @@ const SingleOrder = ({item}: {item: SingleOrderProps}) => {
 }
 
 export default SingleOrder
-
-// const addToCart = ()=>{
-
-
-//     return  
-// }
