@@ -12,7 +12,7 @@ return (
 <div id="orders">
     This is the order page
 
-    <div className="order-con" style={{border: "1px solid red"}}>
+    <div className="order-con">
         {menuItems.map((item, key)=>{
             return <SingleOrder item = {item} key={key}/>
         })}
