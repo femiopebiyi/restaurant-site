@@ -19,7 +19,9 @@ function App() {
         <Routes>
           <Route index element={<Home/>}/>
           <Route path='contact' element={<Contact/>}/>
-          <Route path='orders' element={<Orders/>}/>
+          <Route path='orders'>
+            <Route index element={<Orders/>}/>
+          </Route>
         </Routes>
       </Router>
       </UIContextProvider>
