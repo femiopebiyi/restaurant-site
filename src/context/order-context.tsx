@@ -1,30 +1,42 @@
-// import { ReactNode, createContext } from "react";
+import { ReactNode, createContext, useState } from "react";
 
-// interface orderContextType {
-//     hamState: boolean;
-//     handleClick: () => void;
-//     handleSuccess: ()=> void;
-//     showSuccessMessage: boolean;
-// }
+interface orderContextType {
+    handleChangeIncrease: ()=> void;
+    handleChangeDecrease: ()=> void;
+    quantity: number;
+}
 
-// export const orderContext = createContext<orderContextType>({
-//     hamState: false,
-//     handleClick: () => {}, // Provide a dummy function,
-//     handleSuccess: () => {},
-//     showSuccessMessage: false
-// });
+export const OrderContext = createContext<orderContextType>({
+    handleChangeIncrease: ()=> {},
+    handleChangeDecrease: ()=> {},
+    quantity: 1
+});
 
 
 
-// interface Props {
-//     children: ReactNode
-// }
+interface Props {
+    children: ReactNode
+}
 
 
-// // export function UIContextProvider(props: Props){
+export function OrderContextProvider(props: Props){
+    const [quantity, setQuantity] = useState(1)
 
+        const handleChangeIncrease = ()=>{
+            setQuantity(prev=> prev + 1)
+        }
+        const handleChangeDecrease = ()=>{
+              if(quantity <= 1){
+                return
+              } else{
+                setQuantity(prev=> prev - 1)
+              }
+            
+        }
 
-// //     // return <orderContext.Provider value={3}>
-// //     //     {props.children}
-// //     // </orderContext.Provider>
-// // }
+        const orderContext = { handleChangeDecrease, handleChangeIncrease, quantity } 
+
+    return <OrderContext.Provider value={orderContext}>
+        {props.children}
+    </OrderContext.Provider>
+}

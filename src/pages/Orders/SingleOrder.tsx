@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext} from "react";
+import { OrderContext } from "../../context/order-context";
 
 
 type SingleOrderProps = {
@@ -10,7 +11,7 @@ type SingleOrderProps = {
 }
 
 const SingleOrder = ({item}: {item: SingleOrderProps}) => {
-  const [quantity, setQuantity] = useState(1)
+const {quantity, handleChangeDecrease, handleChangeIncrease} = useContext(OrderContext)
 
   return (
     <div className="item-con">
@@ -26,18 +27,10 @@ const SingleOrder = ({item}: {item: SingleOrderProps}) => {
               })}
             </select>
             </div>
-            <div className="change">
-              <button onClick={()=>{
-                if(quantity <= 1){
-                return
-              } else{
-                setQuantity(prev=> prev - 1)
-              }
-              }}>-</button>
+            <div className="change" style={{marginTop: ".5em"}}>
+              <button onClick={handleChangeDecrease}>-</button>
               <input type="number" placeholder="quantity" value={quantity}  style={{width: "30px"}} disabled/>
-            <button onClick={()=>{
-                setQuantity(prev=> prev + 1)
-              }}>+</button>
+            <button onClick={handleChangeIncrease}>+</button>
             </div>
             <button className="order-btn">Order</button>
         </div> 

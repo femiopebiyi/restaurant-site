@@ -5,12 +5,14 @@ import Home from './pages/Home/Home'
 import { UIContextProvider } from './context/UI-context'
 import Contact from './pages/Contact/Contact'
 import Orders from './pages/Orders/Orders'
+import { OrderContextProvider } from './context/order-context'
 
 function App() {
 
 
   return (
     <div className='App'>
+      <OrderContextProvider>
       <UIContextProvider>
       <Router>
         <Navbar/>
@@ -21,6 +23,7 @@ function App() {
         </Routes>
       </Router>
       </UIContextProvider>
+      </OrderContextProvider>
     </div>
   )
 }

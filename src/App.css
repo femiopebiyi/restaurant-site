@@ -425,6 +425,10 @@ header{
         color: rgb(255, 255, 255);
         margin-top: .5em;
 }
+
+.toppings{
+    margin-top: .5em;
+}
 @media screen and (max-width: 675px) {
 
     header{
@@ -554,15 +558,16 @@ header{
     .indiItem{
         width: 96%;
         margin: 0 auto 1em auto;
-        max-width: 500px;
+        max-width: 600px;
     }
         .indiItem .img {
             border-radius: 10px;
             overflow: hidden;
-            max-width: 400px;
+            max-width: 700px;
             width: 100%;
 
             margin: 0 auto;
+            
         }
 
     #message{

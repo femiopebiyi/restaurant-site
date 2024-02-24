@@ -16,7 +16,7 @@ const navigate = useNavigate()
                         <img src={item.pictureUrl} alt="" className="menu-img"/>
                     </div>
                     <h5>{item.name}</h5>
-                    <p>{item.price}</p>
+                    <p>${item.price}</p>
                 </div>
             })}
         </div>
