@@ -482,6 +482,33 @@ header{
 .toppings{
     margin-top: .5em;
 }
+
+button{
+    font-family: "Poppins";
+}
+.checkout{
+    width: 100%;
+    text-align: center;
+    margin: 1em 0;
+    padding: 1em 0;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    min-height: 36px;
+    min-width: 36px;
+    color: #ffffff;
+    background: #008060;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+
+    text-transform: uppercase;
+}
+
+.checkout:hover {
+    background: #006e52;
+}
 @media screen and (max-width: 675px) {
 
     header{
