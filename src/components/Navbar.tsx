@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="big-header">
         <div className="navbar">
-            <div className="logo">
+            <div className="logo" onClick={()=> navigate("/")} style={{cursor: "pointer"}}>
                 <img src={logo} alt="logo" />
             </div>
 
