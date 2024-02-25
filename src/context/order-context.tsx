@@ -85,12 +85,15 @@ function orderFood(id: number, topping: string, quantity: number, price: number,
     setOrder((prev) => {
         // Check if there is an existing order with the same name, topping, and id
         const existingOrder = prev.find(order => order.id === id && order.name === name && order.topping === topping);
+        console.log(existingOrder)
         
         if (existingOrder) {
             // If an existing order is found, update its quantity and final price
             existingOrder.quantity += quantity;
             existingOrder.finalPrice = existingOrder.quantity * price;
+            
             return [...prev];
+            
         } else {
             // If no existing order found, add a new order
             return [...prev, {
