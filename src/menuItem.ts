@@ -9,27 +9,32 @@ export const menuItems = [
         price: 12.99,
         pictureUrl: pasta,
         id: 1,
-        toppings: ['Bacon', 'Parmesan Cheese', 'Black Pepper', 'none']
+        toppings: ['Bacon', 'Parmesan Cheese', 'Black Pepper', 'none'],
+        quantity: 0 // Added quantity property
     },
     {
         name: 'Margherita Pizza',
         price: 10.99,
         pictureUrl: pizza,
         id: 2,
-        toppings: ['Tomatoes', 'Basil', 'Mozzarella', 'none']
+        toppings: ['Tomatoes', 'Basil', 'Mozzarella', 'none'],
+        quantity: 0 // Added quantity property
     },
     {
         name: 'Grilled Salmon',
         price: 15.99,
         pictureUrl: salmon,
         id: 3,
-        toppings: ['Lemon', 'Garlic Butter', 'Dill', 'none']
+        toppings: ['Lemon', 'Garlic Butter', 'Dill', 'none'],
+        quantity: 0 // Added quantity property
     },
     {
         name: 'Caesar Salad',
         price: 8.99,
         pictureUrl: salad,
         id: 4,
-        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none']
+        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
+        quantity: 0 // Added quantity property
     }
 ];
+

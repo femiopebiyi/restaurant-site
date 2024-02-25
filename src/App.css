@@ -510,6 +510,15 @@ header{
     
 }
 
+.single-con{
+    border: 1px solid red;
+    width: 60%;
+}
+.single-order{
+    display: flex;
+    justify-content: space-between;
+}
+
 .checkout:hover {
     background: #006e52;
 }

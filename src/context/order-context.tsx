@@ -1,12 +1,14 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
+import { menuItems } from "../menuItem";
 
 interface orderContextType {
-    handleChangeIncrease: ()=> void;
-    handleChangeDecrease: ()=> void;
-    quantity: number;
+    handleChangeIncrease: (id: number)=> void;
+    handleChangeDecrease: (id: number)=> void;
+    quantity: { [Id: number]: number };
     order: Order[];
     orderFood: (id: number, topping: string, quantity:number, price: number, name: string)=>void;
 }
+
 
 type Order = {
     name: string;
@@ -19,7 +21,7 @@ type Order = {
 export const OrderContext = createContext<orderContextType>({
     handleChangeIncrease: ()=> {},
     handleChangeDecrease: ()=> {},
-    quantity: 1,
+    quantity: {},
     order: [],
     orderFood: ()=>{}
 });
@@ -30,22 +32,55 @@ interface Props {
     children: ReactNode
 }
 
+const getDefaultCart = (): { [Id: number]: number } => {
+    const cart: { [productId: number]: number } = {};
+
+    for (let i = 0; i < menuItems.length; i++) {
+        const productId = menuItems[i].id;
+        cart[productId] = 1;
+    }
+
+    return cart;
+};
+
 
 export function OrderContextProvider(props: Props){
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(getDefaultCart())
     const [order, setOrder] = useState<Order[]>([])
 
-        const handleChangeIncrease = ()=>{
-            setQuantity(prev=> prev + 1)
+     useEffect(() => {
+        // Retrieve cart items from localStorage when the component mounts
+        const savedCart = localStorage.getItem('cartItem');
+        if (savedCart) {
+            setQuantity(JSON.parse(savedCart));
         }
-        const handleChangeDecrease = ()=>{
-              if(quantity <= 1){
-                return
-              } else{
-                setQuantity(prev=> prev - 1)
-              }
-            
+    }, []);
+
+
+const handleChangeIncrease = (id: number) => {
+    setQuantity((prev) => {
+            const updatedCart = { ...prev, [id]: prev[id] + 1 };
+            // Save updated cart to localStorage
+            localStorage.setItem('cartItem', JSON.stringify(updatedCart));
+            return updatedCart;
+        });
+};
+const handleChangeDecrease = (id: number) => {
+    setQuantity((prev) => {
+        // Check if quantity is already 0, if so, return prev state
+        if (prev[id] <= 1) {
+            return prev;
         }
+
+        // Decrease the quantity by 1
+        const updatedCart = { ...prev, [id]: prev[id] - 1 };
+
+        // Save updated cart to localStorage
+        localStorage.setItem('cartItem', JSON.stringify(updatedCart));
+        return updatedCart;
+    });
+};
+
 
         function orderFood (id: number, topping: string, quantity:number, price: number, name: string ){
             setOrder((prev)=>{

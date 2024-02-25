@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import { menuItems } from "../../menuItem"
 import SingleOrder from "./SingleOrder"
 
@@ -5,7 +6,7 @@ import SingleOrder from "./SingleOrder"
 
 
 const Orders = () => {
-
+const navigate = useNavigate()
 
 
 return (
@@ -16,7 +17,7 @@ return (
         })}
     </div>
 
-    <button className="checkout">Checkout</button>
+    <button className="checkout" onClick={()=> navigate("ordercheckout")}>Checkout</button>
 </div>
 )
 }
