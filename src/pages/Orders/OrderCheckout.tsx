@@ -26,9 +26,9 @@ const OrderCheckout = () => {
         </div>
       })}
 
-      <div className="total-con" style={{display: "flex", justifyContent: "space-between"}}>
+      <div className="total-con" style={{display: "flex", justifyContent: "space-between", marginTop: "3em"}}>
         <h5>Total:</h5>
-        <h5>${t}</h5>
+        <h5>${t.toFixed(2)}</h5>
       </div>
       </div>
     </div>

@@ -513,6 +513,7 @@ header{
 .single-con{
     border: 1px solid red;
     width: 60%;
+    margin-top: 2em;
 }
 .single-order{
     display: flex;

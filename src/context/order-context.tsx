@@ -81,18 +81,30 @@ const handleChangeDecrease = (id: number) => {
     });
 };
 
-
-        function orderFood (id: number, topping: string, quantity:number, price: number, name: string ){
-            setOrder((prev)=>{
-                return [...prev, {
+function orderFood(id: number, topping: string, quantity: number, price: number, name: string) {
+    setOrder((prev) => {
+        // Check if there is an existing order with the same name, topping, and id
+        const existingOrder = prev.find(order => order.id === id && order.name === name && order.topping === topping);
+        
+        if (existingOrder) {
+            // If an existing order is found, update its quantity and final price
+            existingOrder.quantity += quantity;
+            existingOrder.finalPrice = existingOrder.quantity * price;
+            return [...prev];
+        } else {
+            // If no existing order found, add a new order
+            return [...prev, {
                 name: name,
-                finalPrice: price,
+                finalPrice: quantity * price, // Calculate final price based on the new quantity
                 quantity: quantity,
                 topping: topping,
                 id: id
-            }]
-            })
+            }];
         }
+    });
+}
+
+
 
         const orderContext = { handleChangeDecrease, handleChangeIncrease, quantity, order, orderFood} 
 
