@@ -54,6 +54,11 @@ export function OrderContextProvider(props: Props){
         if (savedCart) {
             setQuantity(JSON.parse(savedCart));
         }
+
+        const savedOrder = localStorage.getItem('order');
+    if (savedOrder) {
+        setOrder(JSON.parse(savedOrder));
+    }
     }, []);
 
 
@@ -83,27 +88,29 @@ const handleChangeDecrease = (id: number) => {
 
 function orderFood(id: number, topping: string, quantity: number, price: number, name: string) {
     setOrder((prev) => {
-        // Check if there is an existing order with the same name, topping, and id
-        const existingOrder = prev.find(order => order.id === id && order.name === name && order.topping === topping);
-        console.log(existingOrder)
-        
-        if (existingOrder) {
+        const updatedOrder = [...prev];
+        const existingOrderIndex = prev.findIndex(order => order.id === id && order.name === name && order.topping === topping);
+
+        if (existingOrderIndex !== -1) {
             // If an existing order is found, update its quantity and final price
+            const existingOrder = updatedOrder[existingOrderIndex];
             existingOrder.quantity += quantity;
             existingOrder.finalPrice = existingOrder.quantity * price;
-            
-            return [...prev];
-            
         } else {
             // If no existing order found, add a new order
-            return [...prev, {
+            updatedOrder.push({
                 name: name,
-                finalPrice: quantity * price, // Calculate final price based on the new quantity
+                finalPrice: quantity * price,
                 quantity: quantity,
                 topping: topping,
                 id: id
-            }];
+            });
         }
+
+        // Save updated order to localStorage
+        localStorage.setItem('order', JSON.stringify(updatedOrder));
+
+        return updatedOrder;
     });
 }
 
