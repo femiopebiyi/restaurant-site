@@ -511,7 +511,6 @@ header{
 }
 
 .single-con{
-    border: 1px solid red;
     width: 60%;
     margin-top: 2em;
 }
@@ -697,5 +696,6 @@ header{
         width: 98%;
         margin: 2em auto 0 auto;
     }
+
 }
 
