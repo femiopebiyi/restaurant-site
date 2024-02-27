@@ -19,6 +19,7 @@ const OrderCheckout = () => {
     
 
 
+
   return (
     <div className="order-checkout">
       <h1 style={{textAlign: "center"}}>Checkout Page</h1>
@@ -34,7 +35,11 @@ const OrderCheckout = () => {
         <h5>Total:</h5>
         <h5>${total.toFixed(2)}</h5>
       </div>
+
+      <button className="buy-now">Pay Now</button>
       </div>
+
+      
     </div>
   )
 }

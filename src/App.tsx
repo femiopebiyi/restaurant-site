@@ -7,6 +7,7 @@ import Contact from './pages/Contact/Contact'
 import Orders from './pages/Orders/Orders'
 import { OrderContextProvider } from './context/order-context'
 import OrderCheckout from './pages/Orders/OrderCheckout'
+import About from './pages/About/About'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route index element={<Orders/>}/>
             <Route path='ordercheckout' element={<OrderCheckout/>}/>
           </Route>
+          <Route path='about' element = {<About/>}/>
         </Routes>
       </Router>
       </UIContextProvider>

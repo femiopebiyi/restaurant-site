@@ -1,4 +1,4 @@
-import { useContext, useRef} from "react";
+import { useContext, useRef, useState} from "react";
 import { OrderContext } from "../../context/order-context";
 
 
@@ -17,6 +17,19 @@ const selectRef = useRef<HTMLSelectElement>(null);
 const inputRef = useRef<HTMLInputElement>(null);
 
 const cartItemAmount = quantity[item.id]
+     const [added, setAdded] = useState<string>("Order");
+     const [loading, setLoading] = useState(false);
+
+       function isAdded (){
+    setAdded("Ordered")
+    setLoading(true)
+
+    setTimeout(() => {
+      setAdded("Order")
+      setLoading(false)
+    }, 500);
+  }
+
 
 
   return (
@@ -45,7 +58,8 @@ const cartItemAmount = quantity[item.id]
             <button className="order-btn" onClick={()=>{
               orderFood(item.id, selectRef.current?.value as string, Number(inputRef.current?.value), Number(inputRef.current?.value)*item.price, item.name)
               console.log(order)
-            }}>Order</button>
+              isAdded()
+            }} disabled = {loading}>{added}</button>
         </div> 
 
     </div>
