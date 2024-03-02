@@ -7,6 +7,7 @@ interface orderContextType {
     quantity: { [Id: number]: number };
     order: Order[];
     orderFood: (id: number, topping: string, quantity:number, price: number, name: string)=>void;
+    removeOrder: (id: number) => void; // New function;
 }
 
 
@@ -23,7 +24,8 @@ export const OrderContext = createContext<orderContextType>({
     handleChangeDecrease: ()=> {},
     quantity: {},
     order: [],
-    orderFood: ()=>{}
+    orderFood: ()=>{},
+    removeOrder: () => {}
 });
 
 
@@ -114,9 +116,28 @@ function orderFood(id: number, topping: string, quantity: number, price: number,
     });
 }
 
+function removeOrder(id: number) {
+    setOrder(prevOrders => {
+        const indexToRemove = prevOrders.findIndex(order => order.id === id);
+
+        if (indexToRemove !== -1) {
+            const updatedOrders = [...prevOrders.slice(0, indexToRemove), ...prevOrders.slice(indexToRemove + 1)];
+
+            // Save updated order to localStorage
+            localStorage.setItem('order', JSON.stringify(updatedOrders));
+
+            return updatedOrders;
+        }
+
+        return prevOrders;
+    });
+}
 
 
-        const orderContext = { handleChangeDecrease, handleChangeIncrease, quantity, order, orderFood} 
+
+
+
+        const orderContext = { handleChangeDecrease, handleChangeIncrease, quantity, order, orderFood, removeOrder} 
 
     return <OrderContext.Provider value={orderContext}>
         {props.children}

@@ -762,5 +762,8 @@ header{
         margin-left: 0;
     }
 
+        .single-order p {
+            font-size: .7rem;
+        }
 }
 

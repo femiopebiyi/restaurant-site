@@ -6,7 +6,7 @@ import { XIcon } from "lucide-react";
 
 
 const OrderCheckout = () => {
-  const {order} = useContext(OrderContext)
+  const {order, removeOrder} = useContext(OrderContext)
   
      const [total, setTotal] = useState(0);
 
@@ -28,7 +28,9 @@ const OrderCheckout = () => {
       {order.map((item, key)=>{
         return <div className="single-order" key={key}>
           
-          <p><XIcon/>{`${item.quantity} ${item.name} with ${item.topping} topping`} </p>
+          <p><XIcon color="red" onClick={()=>{
+            removeOrder(item.id)
+          }}/>{`${item.quantity} ${item.name} ${item.topping !== 'none' ? `with ${item.topping} topping` : ''}`} </p>
           <h4>${item.finalPrice}</h4>
         </div>
       })}
