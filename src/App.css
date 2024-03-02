@@ -517,6 +517,19 @@ header{
 .single-order{
     display: flex;
     justify-content: space-between;
+    border-bottom:  .5px solid black;
+    margin-bottom: 1.5em;
+}
+.single-order svg{
+    cursor: pointer;
+}
+
+.single-order svg:hover{
+    animation: squish 300ms ease-in-out;
+}
+.single-order p{
+    display: flex;
+    align-items: center;
 }
 
 .checkout:hover {

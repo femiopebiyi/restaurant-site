@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState} from "react"
 import { OrderContext } from "../../context/order-context"
+import { XIcon } from "lucide-react";
 
 
 
@@ -26,7 +27,8 @@ const OrderCheckout = () => {
       <div className="single-con">
       {order.map((item, key)=>{
         return <div className="single-order" key={key}>
-          <p>{`${item.quantity} ${item.name} with ${item.topping} topping`} </p>
+          
+          <p><XIcon/>{`${item.quantity} ${item.name} with ${item.topping} topping`} </p>
           <h4>${item.finalPrice}</h4>
         </div>
       })}
