@@ -30,7 +30,7 @@ const OrderCheckout = () => {
           
           <p><XIcon color="red" onClick={()=>{
             removeOrder(item.id)
-          }}/>{`${item.quantity} ${item.name} ${item.topping !== 'none' ? `with ${item.topping} topping` : ''}`} </p>
+          }}/>{`${item.quantity} ${item.name} ${item.topping !== 'none' ? `with ${item.topping} topping` : ' '}`} </p>
           <h4>${item.finalPrice}</h4>
         </div>
       })}

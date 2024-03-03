@@ -172,6 +172,8 @@ header{
     width: 95%;
     margin: 0 auto;
     flex-wrap: wrap;
+
+
 }
 
 .indiItem {
@@ -581,6 +583,12 @@ header{
     width: 300px;
     height: 300px;
     object-fit: cover;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+    .menu {
+        width: 75%;
+    }
 }
 
 @media screen and (max-width: 675px) {

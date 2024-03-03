@@ -2,6 +2,8 @@ import pasta from "./assets/images/pasta.jpg"
 import pizza from "./assets/images/pizza.jpg"
 import salmon from "./assets/images/salmon.jpg"
 import salad from "./assets/images/salad.jpg"
+import fufu from "./assets/images/fufu.jpg"
+import jollof from "./assets/images/jollof.jpg"
 
 export const menuItems = [
     {
@@ -35,6 +37,22 @@ export const menuItems = [
         id: 4,
         toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
         quantity: 0 // Added quantity property
-    }
+    },
+    {
+        name: 'FuFu',
+        price: 4.99,
+        pictureUrl: fufu,
+        id: 5,
+        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
+        quantity: 0 // Added quantity property
+    },
+    {
+        name: 'Jollof Rice',
+        price: 7.99,
+        pictureUrl: jollof,
+        id: 6,
+        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
+        quantity: 0 // Added quantity property
+    },
 ];
 
