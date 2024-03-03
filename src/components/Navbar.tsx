@@ -45,7 +45,9 @@ const Navbar = () => {
 
             <div className="icons big-icons">
                 <FacebookLogo size={24}/>
-                <TwitterLogo size={24} />
+                <TwitterLogo size={24} onClick={()=>{
+                    window.open('https://twitter.com/codewithopebiyi', '_blank');
+                }}/>
                 <InstagramLogo size={24}/>
             </div>
         </div>
@@ -101,7 +103,9 @@ return <header id="ham-con" style={{
 
             <div className="icons ham-icon">
                 <FacebookLogo size={24}/>
-                <TwitterLogo size={24} />
+                <TwitterLogo size={24} onClick={()=>{
+                    window.open('https://twitter.com/codewithopebiyi', '_blank');
+                }}/>
                 <InstagramLogo size={24}/>
             </div>
         </div>
