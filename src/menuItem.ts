@@ -43,7 +43,7 @@ export const menuItems = [
         price: 8.99,
         pictureUrl: fufu,
         id: 5,
-        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
+        toppings: ['Egusi Soup', 'Groundnut Soup', 'Okra Soup', 'Palm Nut Soup', 'Light Soup'],
         quantity: 0 // Added quantity property
     },
     {
@@ -51,8 +51,7 @@ export const menuItems = [
         price: 8.99,
         pictureUrl: jollof,
         id: 6,
-        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
+        toppings: ['Fried Plantains', 'Grilled Chicken', 'Fried Fish', 'Fried Plantain', 'Coleslaw'],
         quantity: 0 // Added quantity property
     },
 ];
-
