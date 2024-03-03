@@ -164,6 +164,7 @@ header{
 
 .menu-con{
     padding-top: 5em;
+    background-color: antiquewhite;
 
 }
 .menu{
@@ -181,9 +182,11 @@ header{
     margin-bottom: 1em;
     max-width: 300px;
     overflow: hidden;
-    border: 1px solid gray;
     border-radius: 10px;
     /* padding: .4em; */
+    box-shadow: -4px 9px 5px -6px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: -4px 9px 5px -6px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: -4px 9px 5px -6px rgba(0, 0, 0, 0.5);
 
 }
 .indiItem .img{
@@ -333,12 +336,13 @@ header{
     fill: black;
     height: 100%;
     width: 100%;
+    border: none;
 }
 
 .check{
     text-align: center;
     text-transform: capitalize;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .reserve-con {

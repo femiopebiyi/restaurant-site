@@ -32,7 +32,7 @@ const Home = () => {
       maxWidth: '2000px',
       width: '100%',
       margin: '0 auto',
- 
+        backgroundColor: "antiquewhite"
     }} className="reserve-con">
       <h1 className="check">check out reservations</h1>
     <Reservation/>
