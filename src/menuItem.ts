@@ -40,7 +40,7 @@ export const menuItems = [
     },
     {
         name: 'FuFu',
-        price: 4.99,
+        price: 8.99,
         pictureUrl: fufu,
         id: 5,
         toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
@@ -48,7 +48,7 @@ export const menuItems = [
     },
     {
         name: 'Jollof Rice',
-        price: 7.99,
+        price: 8.99,
         pictureUrl: jollof,
         id: 6,
         toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
