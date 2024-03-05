@@ -464,7 +464,7 @@ header{
 }
 
 .item{
-    border: 0.5px solid black;
+
     flex-grow: 1;
     margin-bottom: 1em;
     padding: .5em;
