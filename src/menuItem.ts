@@ -1,7 +1,7 @@
 import pasta from "./assets/images/pasta.jpg"
 import pizza from "./assets/images/pizza.jpg"
 import salmon from "./assets/images/salmon.jpg"
-import salad from "./assets/images/salad.jpg"
+import pepperSoup from "./assets/images/peppersoup.jpg"
 import fufu from "./assets/images/fufu.jpg"
 import jollof from "./assets/images/jollof.jpg"
 
@@ -31,16 +31,16 @@ export const menuItems = [
         quantity: 0 // Added quantity property
     },
     {
-        name: 'Caesar Salad',
-        price: 8.99,
-        pictureUrl: salad,
+        name: 'Pepper Soup',
+        price: 35.99,
+        pictureUrl: pepperSoup,
         id: 4,
-        toppings: ['Croutons', 'Parmesan Cheese', 'Caesar Dressing', 'none'],
+        toppings: ['Goat Meat', 'Cow Beef', 'Pork', 'none'],
         quantity: 0 // Added quantity property
     },
     {
         name: 'FuFu',
-        price: 8.99,
+        price: 45.99,
         pictureUrl: fufu,
         id: 5,
         toppings: ['Egusi Soup', 'Groundnut Soup', 'Okra Soup', 'Palm Nut Soup', 'Light Soup'],
@@ -48,7 +48,7 @@ export const menuItems = [
     },
     {
         name: 'Jollof Rice',
-        price: 8.99,
+        price: 33.99,
         pictureUrl: jollof,
         id: 6,
         toppings: ['Fried Plantains', 'Grilled Chicken', 'Fried Fish', 'Fried Plantain', 'Coleslaw'],
