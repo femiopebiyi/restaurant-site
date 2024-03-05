@@ -12,7 +12,6 @@ export const menuItems = [
         pictureUrl: pasta,
         id: 1,
         toppings: ['Bacon', 'Parmesan Cheese', 'Black Pepper', 'none'],
-        quantity: 0 // Added quantity property
     },
     {
         name: 'Margherita Pizza',
@@ -20,7 +19,6 @@ export const menuItems = [
         pictureUrl: pizza,
         id: 2,
         toppings: ['Tomatoes', 'Basil', 'Mozzarella', 'none'],
-        quantity: 0 // Added quantity property
     },
     {
         name: 'Grilled Salmon',
@@ -28,7 +26,6 @@ export const menuItems = [
         pictureUrl: salmon,
         id: 3,
         toppings: ['Lemon', 'Garlic Butter', 'Dill', 'none'],
-        quantity: 0 // Added quantity property
     },
     {
         name: 'Pepper Soup',
@@ -36,7 +33,6 @@ export const menuItems = [
         pictureUrl: pepperSoup,
         id: 4,
         toppings: ['Goat Meat', 'Cow Beef', 'Pork', 'none'],
-        quantity: 0 // Added quantity property
     },
     {
         name: 'FuFu',
@@ -44,7 +40,6 @@ export const menuItems = [
         pictureUrl: fufu,
         id: 5,
         toppings: ['Egusi Soup', 'Groundnut Soup', 'Okra Soup', 'Palm Nut Soup', 'Light Soup'],
-        quantity: 0 // Added quantity property
     },
     {
         name: 'Jollof Rice',
@@ -52,6 +47,5 @@ export const menuItems = [
         pictureUrl: jollof,
         id: 6,
         toppings: ['Fried Plantains', 'Grilled Chicken', 'Fried Fish', 'Fried Plantain', 'Coleslaw'],
-        quantity: 0 // Added quantity property
     },
 ];
