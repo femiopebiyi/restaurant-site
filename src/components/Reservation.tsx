@@ -1,9 +1,10 @@
-import { Circle, CircleDot } from "lucide-react";
+import { Circle, CircleDot, XIcon } from "lucide-react";
  import previous from "../assets/images/trace.svg"
  import next from "../assets/images/trace (1).svg"
 
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { slideImages } from "../reservation-img"
+import { UIContext } from "../context/UI-context";
 
 
 const Reservation = () => {
@@ -25,13 +26,19 @@ setImageIndex((index)=> {
       })
   }
 
+  const [showReserve, setShowReserve] = useState(false)
+  const {clickedReserve, showReservation} = useContext(UIContext)
+
   return (
     <div className="reservation" style={{width: '100%', height: "100%", position: "relative"}} id="reservation">
       <div style={{width: '100%', height: '100%', display: "flex",overflow: "hidden"}}>
         {slideImages.map((img)=>{
           return<div style={{translate: `${-100 *imageIndex}%`}} className="img-slider-img"> <img src={img.url} alt=""  key={img.url} loading="lazy"/>
           <h4 style={{position: "absolute", top:"10%", right: "15%", fontFamily: "Lobster", fontWeight: 400, color:  'white'}}>{img.caption}</h4>
-          <button className="book">Book Now</button>
+          <button className="book" onClick={()=>{
+            showReservation(img.id)
+            setShowReserve(!showReserve)
+          }}>Book Now</button>
           </div>
         })}
       </div>
@@ -48,6 +55,35 @@ setImageIndex((index)=> {
           return <button onClick={()=> setImageIndex(index)} key={img.url} className="dot-icon">{index === imageIndex ? <CircleDot/> : <Circle/>}</button>
         })}
       </div>
+
+      <div className="single-reserve" style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    backgroundColor: "#004332",
+                    height: "500px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    maxWidth: "500px",
+                    width: "400px",
+                    opacity: showReserve ? 1:0,
+                    zIndex: showReserve ? 1: -1
+                   
+                }}>
+                    <h3 style={{textAlign: "center", color: "white"}}>Book a Reservation</h3>
+                    <h5>{clickedReserve?.name}</h5>
+                    <p>{clickedReserve?.description}</p>
+                    <h4>${clickedReserve?.price}</h4>
+                    <button className="book">Book Now</button>
+                    <XIcon className="cancelmessage" style={{
+                        position: "absolute",
+                        top: "5px",
+                        right: "5px"
+                    }}  color="white" onClick={()=>{setShowReserve(!showReserve)}}/>
+                </div>
     </div>
   )
 }
