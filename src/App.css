@@ -830,8 +830,13 @@ header{
             font-size: .7rem;
         }
 
-                .empty-cart {
-                    font-size: .5rem;
-                }
+    .empty-cart {
+        font-size: .5rem;
+    }
+
+#single-reserve {
+    width: 98%;
+    height: fit-content;
+}
 }
 
