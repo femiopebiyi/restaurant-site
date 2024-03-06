@@ -2,7 +2,7 @@ import { Circle, CircleDot, XIcon } from "lucide-react";
  import previous from "../assets/images/trace.svg"
  import next from "../assets/images/trace (1).svg"
 
-import { useContext, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { slideImages } from "../reservation-img"
 import { UIContext } from "../context/UI-context";
 
@@ -31,8 +31,23 @@ setImageIndex((index)=> {
 
 const singleReserveRef = useRef<HTMLDivElement>(null);
 
+   useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (singleReserveRef.current && !singleReserveRef.current.contains(event.target as Node)) {
+        setShowReserve(false);
+      }
+    }
 
+    if (showReserve) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
 
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [showReserve]);
 
   return (
     <div className="reservation" style={{width: '100%', height: "100%", position: "relative"}} id="reservation">
@@ -40,7 +55,8 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
         {slideImages.map((img)=>{
           return<div style={{translate: `${-100 *imageIndex}%`}} className="img-slider-img"> <img src={img.url} alt=""  key={img.url} loading="lazy"/>
           <h4 style={{position: "absolute", top:"10%", right: "15%", fontFamily: "Lobster", fontWeight: 400, color:  'white'}}>{img.caption}</h4>
-          <button className="book" onClick={()=>{
+          <button className="book" onClick={(e)=>{
+            e.stopPropagation()
             showReservation(img.id)
             setShowReserve(prev => !prev)
           }}>Book Now</button>
