@@ -80,6 +80,10 @@ header{
 
 
 }
+
+.home-con{
+    background-color: antiquewhite;
+}
 .benefits-con{
     font-size: 2rem;
     line-height: 1;
