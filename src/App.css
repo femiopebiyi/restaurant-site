@@ -602,6 +602,8 @@ header{
 #single-reserve{
     height: 500px;
     width: 400px;
+    transition: opacity 300ms ease-in-out;
+    border-radius: 10px;
 }
 
 #single-reserve h5{
@@ -633,9 +635,11 @@ header{
 
 #single-reserve p{
     width: 98%;
-    margin:  1em auto 0 auto;
+    margin:  2em auto 0 auto;
     display: flex;
-        align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1800px) {
@@ -837,6 +841,12 @@ header{
 #single-reserve {
     width: 98%;
     height: fit-content;
+}
+
+.book{
+    font-size: 1rem;
+    top: 70%;
+        right: 25%;
 }
 }
 
