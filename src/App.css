@@ -641,6 +641,15 @@ header{
     text-align: center;
     color: white;
 }
+#single-reserve h4{
+    border: 1px solid white;
+    margin-top: 1em;
+    padding: .5em;
+    border-radius: 65px 65px 65px 65px;
+    -webkit-border-radius: 65px 65px 65px 65px;
+    -moz-border-radius: 65px 65px 65px 65px;
+    animation: move 800ms alternate-reverse infinite;
+}
 
 
 @media only screen and (min-width: 800px) and (max-width: 1800px) {
