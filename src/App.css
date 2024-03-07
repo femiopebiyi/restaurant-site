@@ -600,7 +600,7 @@ header{
     align-items: center;
 }
 #single-reserve{
-    height: 500px;
+    height: fit-content;
     width: 400px;
     transition: opacity 300ms ease-in-out;
     border-radius: 10px;
@@ -642,13 +642,14 @@ header{
     color: white;
 }
 #single-reserve h4{
-    border: 1px solid white;
-    margin-top: 1em;
-    padding: .5em;
-    border-radius: 65px 65px 65px 65px;
-    -webkit-border-radius: 65px 65px 65px 65px;
-    -moz-border-radius: 65px 65px 65px 65px;
-    animation: move 800ms alternate-reverse infinite;
+    margin-top: .3em;
+}
+
+.name{
+    margin-top: .6em;
+    padding: .7em;
+    border: none;
+    outline: none;
 }
 
 

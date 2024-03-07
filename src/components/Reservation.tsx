@@ -95,6 +95,7 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
                     <h3 style={{textAlign: "center", color: "white"}}>Book a Reservation</h3>
                     <h5>{clickedReserve?.name}</h5>
                     <p>{clickedReserve?.description}</p>
+                    <input type="text" placeholder="Name" className="name"/>
                     <h4>${clickedReserve?.price}</h4>
                     <button className="book-reserve">Pay Now</button>
                     <XIcon className="cancelmessage" style={{
