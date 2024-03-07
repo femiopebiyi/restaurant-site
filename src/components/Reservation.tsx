@@ -79,7 +79,7 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
 
       <div id="single-reserve" style={{
                     position: "absolute",
-                    top: "50%",
+                    top: "10%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                     backgroundColor: "#004332",
