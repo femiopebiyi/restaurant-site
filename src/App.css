@@ -608,6 +608,10 @@ header{
     width: 400px;
     transition: opacity 300ms ease-in-out;
     border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #single-reserve h5{
@@ -856,6 +860,7 @@ header{
 #single-reserve {
     width: 98%;
     height: fit-content;
+    top: 10%;
 }
 
 .book{
