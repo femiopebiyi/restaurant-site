@@ -20,3 +20,4 @@ initializeApp(firebaseConfig)
 const database = getFirestore()
 
 export const colRef = collection(database, "details")
+export const ReserveRef = collection(database, "reservation")

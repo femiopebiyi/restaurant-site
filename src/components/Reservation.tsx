@@ -5,6 +5,8 @@ import { Circle, CircleDot, XIcon } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react"
 import { slideImages } from "../reservation-img"
 import { UIContext } from "../context/UI-context";
+import { addDoc } from "firebase/firestore";
+import { ReserveRef } from "../firebase/firebase";
 
 
 const Reservation = () => {
@@ -49,6 +51,19 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
     };
   }, [showReserve]);
 
+  const [customerName, setCustomerName] = useState<string | null>(null)
+
+  async function submitReservation(name: string, table: string, price: number){
+      addDoc(ReserveRef, {
+      name,
+      table,
+      price
+     }).then(()=>{
+      alert("Reservation Booked!!!")
+      setCustomerName("")
+     })
+  }
+
   return (
     <div className="reservation" style={{width: '100%', height: "100%", position: "relative"}} id="reservation">
       <div style={{width: '100%', height: '100%', display: "flex",overflow: "hidden"}}>
@@ -91,9 +106,14 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
                     <h3 style={{textAlign: "center", color: "white"}}>Book a Reservation</h3>
                     <h5>{clickedReserve?.name}</h5>
                     <p>{clickedReserve?.description}</p>
-                    <input type="text" placeholder="Name" className="name"/>
+                    <input type="text" placeholder="Name" className="name" onChange={(e) =>{
+                      setCustomerName(e.target.value)
+                    }} value={customerName ?? ""}/>
                     <h4>${clickedReserve?.price}</h4>
-                    <button className="book-reserve">Pay Now</button>
+                    <button className="book-reserve" onClick={()=>{
+                      if(clickedReserve && customerName)
+                      submitReservation(customerName, clickedReserve.name, clickedReserve.price)
+                    }}>Pay Now</button>
                     <XIcon className="cancelmessage" style={{
                         position: "absolute",
                         top: "5px",
