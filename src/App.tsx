@@ -8,6 +8,7 @@ import Orders from './pages/Orders/Orders'
 import { OrderContextProvider } from './context/order-context'
 import OrderCheckout from './pages/Orders/OrderCheckout'
 import About from './pages/About/About'
+import StripeContainer from './components/StripeContainer'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route index element={<Home/>}/>
+          <Route path='payment' element = {<StripeContainer/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='orders'>
             <Route index element={<Orders/>}/>

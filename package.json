@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "@stripe/react-stripe-js": "^2.5.1",
+    "@stripe/stripe-js": "^3.0.7",
+    "axios": "^1.6.7",
     "firebase": "^10.8.0",
     "lucide-react": "^0.331.0",
     "phosphor-react": "^1.4.1",
