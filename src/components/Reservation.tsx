@@ -7,6 +7,7 @@ import { slideImages } from "../reservation-img"
 import { UIContext } from "../context/UI-context";
 import { addDoc } from "firebase/firestore";
 import { ReserveRef } from "../firebase/firebase";
+import { useNavigate } from "react-router-dom";
 
 
 const Reservation = () => {
@@ -63,6 +64,7 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
       setCustomerName("")
      })
   }
+  const navigate = useNavigate()
 
   return (
     <div className="reservation" style={{width: '100%', height: "100%", position: "relative"}} id="reservation">
@@ -113,6 +115,7 @@ const singleReserveRef = useRef<HTMLDivElement>(null);
                     <button className="book-reserve" onClick={()=>{
                       if(clickedReserve && customerName)
                       submitReservation(customerName, clickedReserve.name, clickedReserve.price)
+                      navigate("/payment")
                     }}>Pay Now</button>
                     <XIcon className="cancelmessage" style={{
                         position: "absolute",
