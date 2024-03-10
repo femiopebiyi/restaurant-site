@@ -1,7 +1,7 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import { StripeCardElementOptions } from "@stripe/stripe-js"
 import axios from "axios"
-import { useState } from "react"
+import { FormEvent, useState } from "react"
 
 const PaymentForm = () => {
     const [success, setSuccess] = useState(false)
@@ -29,7 +29,8 @@ const PaymentForm = () => {
 	}
 }
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
         if (stripe && elements) {
             const cardElement = elements.getElement(CardElement)
             if (cardElement) {

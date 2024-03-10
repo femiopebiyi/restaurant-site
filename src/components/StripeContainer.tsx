@@ -8,9 +8,11 @@ const stripeTestPromise = loadStripe(PUBLIC_KEY)
 
 const StripeContainer = () => {
   return (
+    <div className="stripe-con">
     <Elements stripe={stripeTestPromise}>
       <PaymentForm/>
     </Elements>
+    </div>
   )
 }
 

@@ -695,10 +695,10 @@ header{
 .stripe button {
     display: block;
     font-size: 16px;
-    width: calc(100% - 30px);
+    width: 500px;
     height: 40px;
     margin: 40px 15px 0;
-    background-color: #f6a4eb;
+    background-color: #008060;
     box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;
     border-radius: 4px;
     color: #fff;
@@ -710,12 +710,23 @@ header{
     max-width: 600px;
 }
 
+.stripe button:hover {
+    background: #006e52;
+}
+
 .stripe button:active {
     background-color: #d782d9;
     box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
     transform: scale(0.99);
 }
 
+.stripe-con{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+    align-items: center;
+}
 
 
 @media only screen and (min-width: 800px) and (max-width: 1800px) {
