@@ -706,8 +706,8 @@ header{
     cursor: pointer;
     transition: all 100ms ease-in-out;
     will-change: transform, background-color, box-shadow;
-    border: none;
     max-width: 600px;
+    border: none;
 }
 
 .stripe button:hover {
@@ -721,7 +721,6 @@ header{
 }
 
 .stripe-con{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     height: 85vh;
@@ -935,6 +934,10 @@ header{
     font-size: 1rem;
     top: 70%;
         right: 25%;
+}
+
+.stripe button {
+    width: 300px;
 }
 }
 
