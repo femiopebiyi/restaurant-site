@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { OrderContext } from "../../context/order-context";
 import { XIcon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const OrderCheckout = () => {
   const { order, removeOrder } = useContext(OrderContext);
 
   const [total, setTotal] = useState(0);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     let t = 0;
@@ -41,7 +43,9 @@ const OrderCheckout = () => {
             <h5>${total.toFixed(2)}</h5>
           </div>
 
-          <button className="buy-now">Pay Now</button>
+          <button className="buy-now" onClick={()=>{
+            navigate("/payment")
+          }}>Pay Now</button>
         </div>
       </div>
     ) : (

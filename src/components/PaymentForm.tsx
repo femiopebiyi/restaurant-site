@@ -1,7 +1,8 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import { StripeCardElementOptions } from "@stripe/stripe-js"
 import axios from "axios"
-import { FormEvent, useState } from "react"
+import { FormEvent, useContext, useEffect, useState } from "react"
+import { OrderContext } from "../context/order-context"
 
 const PaymentForm = () => {
     const [success, setSuccess] = useState(false)
@@ -66,8 +67,21 @@ const PaymentForm = () => {
         
     }
 
+    const { order } = useContext(OrderContext);
+
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    let t = 0;
+    for (let i = 0; i < order.length; i++) {
+      t += order[i].finalPrice;
+    }
+    setTotal(t);
+  }, [order]);
+
     return (
         <div className="stripe">
+            <div className="totalpay" style={{textAlign: "center"}}>Pay ${total.toFixed(2)}</div>
             {!success ? 
             <form onSubmit={handleSubmit}>
                 <fieldset className="FormGroup">
