@@ -30,9 +30,9 @@ const cartItemAmount = quantity[item.id]
     }, 500);
   }
 
-window.addEventListener("beforeunload", ()=>{
-  localStorage.clear();
-})
+// window.addEventListener("beforeunload", ()=>{
+//   localStorage.clear();
+// })
 
   return (
     <div className="item-con">
