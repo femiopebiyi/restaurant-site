@@ -57,7 +57,7 @@ const Contact = () => {
         <h1>contact us</h1>
 
         <p className="contact-message">
-            Send us a message and we’ll get back to you as soon as possible. You can also reach us by phone at +234-90-6624-5634 Looking forward to hearing from you.
+            Send us a message and we’ll get back to you as soon as possible... You can also reach us by phone at +234-90-6624-5634 Looking forward to hearing from you.
         </p>
 
         <form id="message" onSubmit={handleSubmit(onCreatePost)}>
