@@ -27,7 +27,7 @@ const cartItemAmount = quantity[item.id]
     setTimeout(() => {
       setAdded("Order")
       setLoading(false)
-    }, 500);
+    }, 300);
   }
 
 // window.addEventListener("beforeunload", ()=>{
