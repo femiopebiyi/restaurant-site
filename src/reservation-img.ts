@@ -25,11 +25,5 @@ export const slideImages = [
     id: 3,
     price: 1750, // Random price for Dark Table
     description: 'Experience a unique dining atmosphere with our special dark table. Illuminated by ambient lighting, this table creates a cozy and intimate setting for romantic dinners or special celebrations. Its modern design and comfortable seating make it an ideal choice for an unforgettable dining experience.'
-  },
-  // {
-  //   url: reservation4,
-  //   caption: 'Bar Table'
-  //   price: 60, // Random price for Bar Table
-  //   description: 'Another bar table option.'
-  // },
+  }
 ];
