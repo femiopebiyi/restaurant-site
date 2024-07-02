@@ -34,7 +34,7 @@ const Home = () => {
       margin: '0 auto',
         backgroundColor: "antiquewhite"
     }} className="reserve-con">
-      <h1 className="check">Reservations</h1>
+      <h1 className="check">Reservations.</h1>
     <Reservation/>
     </div>
     </div>
